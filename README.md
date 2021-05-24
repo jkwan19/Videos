@@ -1,5 +1,6 @@
 # Videos
 
+## Description
 This project is a video search web application that displays and plays videos pulled from Youtube's API.
 
 ## Available Scripts
