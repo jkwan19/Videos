@@ -7,6 +7,7 @@ class App extends React.Component {
 
   state = {
     videos : [],
+    selectedVideo: null,
   };
 
   onTermSubmit = async (term) => {
@@ -16,14 +17,22 @@ class App extends React.Component {
       }
     });
 
-    this.setState({ videos: response.data.items });
+    this.setState({
+      videos: response.data.items
+    });
+  };
+
+  onVideoSelected = (video) => {
+    this.setState({
+      selectedVideo: video
+    })
   };
 
   render() {
     return (
       <div className="ui-continer">
         <SearchBar onTermSubmit={this.onTermSubmit}/>
-        <VideoList videos={this.state.videos}/>
+        <VideoList videos={this.state.videos} onVideoSelected={this.onVideoSelected}/>
       </div>
     )
   }
