@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Videos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a video search web application that displays and plays videos pulled from Youtube's API.
 
 ## Available Scripts
 
