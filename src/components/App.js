@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
+import VideoDetail from './VideoDetail';
 import youtube from '../apis/youtube';
 
 class App extends React.Component {
@@ -32,7 +33,11 @@ class App extends React.Component {
     return (
       <div className="ui-continer">
         <SearchBar onTermSubmit={this.onTermSubmit}/>
-        <VideoList videos={this.state.videos} onVideoSelected={this.onVideoSelected}/>
+        <VideoDetail video={this.state.selectedVideo} />
+        <VideoList
+          videos={this.state.videos}
+          onVideoSelected={this.onVideoSelected}
+          />
       </div>
     )
   }
